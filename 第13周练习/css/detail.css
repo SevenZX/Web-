@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.product-intro {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 20px;
+}
+
+.product-intro .preview-wrap {
+    width: 302px;
+    float: left;
+    padding-bottom: 15px;
+}
+
+.product-intro .itemInfo-wrap {
+    min-height: 450px;
+    margin-right: 24px;
+    width: 624px;
+    float: right;
+}
+
+.product-intro .itemInfo-wrap .sku-name {
+    font: 700 16px Arial, "microsoft yahei";
+    color: #666;
+    padding-top: 10px;
+    line-height: 28px;
+    margin-bottom: 5px;
+}
+
+.product-intro .itemInfo-wrap .summary {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.product-intro .itemInfo-wrap .summary-price-wrap {
+    padding: 10px 0 0;
+    height: 42px;
+    background: #f3f3f3;
+}
+
+.product-intro .itemInfo-wrap .summary-price-wrap .summary-price .p-price span {
+    font-size: 16px;
+    color: #e4393c;
+}
+
+.product-intro .itemInfo-wrap .summary-price-wrap .summary-price .p-price .price {
+    font-size: 22px;
+}
+
+.product-intro .itemInfo-wrap .summary-price-wrap .summary-price .notice {
+    color: #005aa0;
+    vertical-align: 2px;
+}
+
+.product-intro .itemInfo-wrap .summary-price-wrap .summary-price .notice:hover {
+    color: #f30213;
+}
+
+.product-intro .itemInfo-wrap .summary-price-wrap .summary-info {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    color: #999;
+}
+
+.product-intro .itemInfo-wrap .summary-price-wrap .summary-info .item {
+    border-left: solid 1px #e6e6e6;
+    text-align: center;
+    padding: 0 10px;
+    line-height: 15px;
+}
+
+.product-intro .itemInfo-wrap .summary-price-wrap .summary-info p {
+    color: #999;
+}
+
+.product-intro .itemInfo-wrap .summary-price-wrap .summary-info .count {
+    font: 14px verdana;
+    color: #005ea7;
+    margin-left: 5px;
+}
+
+.product-intro .itemInfo-wrap .summary-price-wrap .summary-info .count:hover {
+    color: #f30213;
+}
+
+.product-intro .itemInfo-wrap .dt {
+    float: left;
+    padding-left: 10px;
+    font-family: simsun;
+    color: #999;
+    margin-top: 5px;
+}
+
+.product-intro .itemInfo-wrap .dd {
+    margin-left: 76px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    margin-top: 20px;
+}
+
+.btn a {
+    border: 1px solid rgb(134, 134, 134);
+    padding: 6px 20px;
+    border-radius: 5px;
+    color: #333;
+    margin-right: 15px;
+}
