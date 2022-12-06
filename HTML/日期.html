@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日期</title>
+    <style>
+        #div1{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <script>
+        function ShowTime(){
+            var today=new Date();
+            var year =today.getFullYear();
+            var month = today.getMonth()+1;
+            var day = today.getDate();
+            var hour = today.getHours();
+            var minute = today.getMinutes();
+            var second= today.getSeconds();
+            var str=year+"年"+month+"月"+day+"日 "+hour+":"+minute+":"+second;
+            document.getElementById("div1").innerHTML=str;
+        }
+        setInterval(ShowTime,1000);
+    </script>
+</body>
+</html>

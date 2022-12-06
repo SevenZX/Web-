@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>四则运算</title>
+</head>
+<body>
+    <input type="button" name="btn" value="计算两数运算结果" onclick="arithmetic()">
+    <script>
+        function arithmetic(){
+           var first,second,symbol,sum;
+            first=parseInt(prompt("请输入第一个数",""));
+            second=parseInt(prompt("请输入第二个数",""));
+            symbol=prompt("请输入运算符号","");
+            switch(symbol){
+                case "+":
+                    sum=first+second;
+                    break;
+                case "-":
+                    sum=first-second;
+                    break;
+                case "*":
+                    sum=first*second;
+                    break;
+                case "/":
+                    sum=first+second;
+                    break;
+            }
+            // if(symbol=="+"){
+            //     sum=first+second;
+            // }
+            // if(symbol=="_"){
+            //     sum=first-second;
+            // }
+            // if(symbol=="*"){
+            //     sum=first*second;
+            // }
+            // if(symbol=="/"){
+            //     sum=first/second;
+            // }
+            document.write("两数运算结果为："+first+symbol+second+"="+sum); 
+        }
+        
+    </script>
+</body>
+</html>

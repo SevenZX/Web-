@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello JS</title>
+</head>
+<body>
+    <script type="text/javascript">
+        document.write("Hello JS"+'<br>');
+        var num1=12,num2=025,num3=0xA3;     
+        document.write("num1="+num1+",num2="+num2+",num3="+num3+'<br>');
+        var str1="LLL",str2="str.split";
+        document.write("str1="+str1+",str2="+str2);
+        //alert(null=underfined);
+        var str = "123abc456DEF";
+	    document.write("下标为1的字符是："+str.charAt(1)+'<br>');  
+	    document.write("把字符串转换成大写："+str.toUpperCase()+'<br>');
+	    document.write("把字符串转换成小写："+str.toLowerCase()+'<br>');
+	    document.write("查找abc在str中首次出现的位置："+str.indexOf("abc")+'<br>');
+	    document.write("查找xyz在str中首次出现的位置："+str.indexOf("xyz")+'<br>');
+	    document.write("返回索引6和9之间的字符串："+str.substring(6,9)+'<br>');
+	    document.write("把字符串str分割为字符串数组："+str.split("")+'<br>');
+	    document.write("把DEF替换成789："+str.replace("DEF","789"));
+    </script>
+    <br>
+    <input type="button" value="点我试试" onclick="javascript:alert('Hello,everybody!')" />
+    <br>
+    <script src="../Javascript/外部javascript.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>QQ彩贝高级搜索</title>
+    <style>
+        * {
+            margin: 20px;
+            padding: 0px;
+        }
+
+        form {
+            border: 1px solid gray;
+            width: 300px;
+            height: 320px;
+            display: block;
+            position: absolute;
+            transition: all 0.5s linear;
+        }
+
+        form div:nth-of-type(1) {
+            width: 250px;
+            height: 10px;
+            background-color: red;
+        }
+
+        form input:nth-of-type(1) {
+            position: absolute;
+            top: 80px;
+            width: 250px;
+            height: 40px;
+        }
+
+        form input:nth-of-type(2) {
+            position: absolute;
+            right: 100px;
+            top: 150px;
+            width: 70px;
+            height: 30px;
+            font-weight: bolder;
+            font-size: 16px;
+            background-color: gray;
+            border-color: white;
+        }
+        select {
+            position: relative;
+            top: 150px;
+            left: 20px;
+            margin: 10px;
+            opacity: 0;
+            transition: all 0.5s linear;
+        }
+        div select:nth-of-type(7) {
+            left: 95px;
+        }
+
+        form:hover {
+            height: 400px;
+        }
+
+        form:hover select {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <h2>高级搜索</h2>
+        <div></div>
+        <input type="text" placeholder="请输入关键字" />
+        <input type="button" value="搜索" />
+        <div>
+            <select name="">
+                <option value="1">场合</option>
+            </select>
+            <select name="">
+                <option value="1">性别</option>
+            </select>
+            <select name="">
+                <option value="1">风格</option>
+            </select>
+            <select name="">
+                <option value="1">色系</option>
+            </select>
+            <select name="">
+                <option value="1">价格</option>
+            </select>
+            <select name="">
+                <option value="1">年龄</option>
+            </select>
+            <select name="">
+                <option value="1">季节</option>
+            </select>
+        </div>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多彩照片墙</title>
+    <style> 
+        div img:nth-child(odd){
+            width: 200px;
+        }
+        div img:nth-child(even){
+            width: 300px;
+        }
+        div{
+            margin: 200px auto;
+            width: 960px;
+            position: relative;
+        }
+        div img{
+            border: 1px solid gray;
+            padding: 10px;
+            position: absolute;
+            background: white;
+            z-index: 1;
+            transition: all 0.6s ease-in-out;
+        }
+        div img:nth-child(1){
+            top: 0px;
+            left: 300px;
+            transform: rotate(-15deg);
+        }
+        div img:nth-child(2){
+            top: 0px;
+            left: 450px;
+            transform: rotate(15deg);
+        }
+        div img:nth-child(3){
+            top: 0px;
+            left: 600px;
+            transform: rotate(-25deg);
+        }
+        div img:nth-child(4){
+            top: 0px;
+            left: 700px;
+            transform: rotate(20deg);
+        }
+        div img:nth-child(5){
+            top: 200px;
+            left: 100px;
+            transform: rotate(-15deg);
+        }
+        div img:nth-child(6){
+            top: 220px;
+            left: 300px;
+            transform: rotate(25deg);
+        }
+        div img:nth-child(7){
+            top: 100px;
+            left: 400px;
+            transform: rotate(5deg);
+        }
+        div img:nth-child(8){
+            top: 200px;
+            left: 550px;
+            transform: rotate(15deg);
+        }
+        div img:nth-child(9){
+            top: 200px;
+            left: 700px;
+            transform: rotate(-25deg);
+        }
+        div img:nth-child(10){
+            top: 200px;
+            left: 450px;
+            transform: rotate(-15deg);
+        }
+        div img:hover{
+            z-index: 2;
+            transform: rotate(0deg) scale(1.5);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="../img/2022-10-31/1.jpg" alt="1">
+        <img src="../img/2022-10-31/2.jpg" alt="2">
+        <img src="../img/2022-10-31/3.jpg" alt="3">
+        <img src="../img/2022-10-31/4.jpg" alt="4">
+        <img src="../img/2022-10-31/5.jpg" alt="5">
+        <img src="../img/2022-10-31/6.jpg" alt="6">
+        <img src="../img/2022-10-31/7.jpg" alt="7">
+        <img src="../img/2022-10-31/8.jpg" alt="8">
+        <img src="../img/2022-10-31/9.jpg" alt="9">
+        <img src="../img/2022-10-31/10.jpg" alt="10">
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成绩评级</title>
+</head>
+<body>
+    <script>
+        var str=prompt("请输入成绩","");
+        if(isNaN(str)){
+            alert("输入的不是数字");
+        }else if(str<0&&str>100){
+            alert("输入的考试科目无效");
+        }else if(str>=90&&str<=100){
+            alert("真棒，语文考试成绩评级为：优");
+        }else if(str>=80&&str<90){
+            alert("语文考试成绩评级为：良，要加油哦");
+        }else if(str>=60&&str<80){
+            alert("语文考试成绩评级为：合格，继续努力呀")
+        }else{
+            alert("语文考试成绩评级为：不合格，要认真学习哦");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>显示日期时间</title>
+    <style>
+        #div1,#div2,#div3{
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <input type="button" value="STOP" onclick="clearInterval(a)">
+    <script>
+        var a = setInterval(function(){
+            var today=new Date();
+            var year=today.getFullYear();
+            var month=today.getMonth()+1;
+            var day=today.getDate();
+            var minute=today.getMinutes();
+            var hour=today.getHours();
+            var second=today.getSeconds();
+            var str1="今天日期："+year+"年"+month+"月"+day+"日";
+            var str2="现在时间："+hour+"点"+minute+"分"+second+"秒";
+            var str3="下午好！欢迎来到惠购商城";
+            document.getElementById("div1").innerHTML=str1;
+            document.getElementById("div2").innerHTML=str2;
+            document.getElementById("div3").innerHTML=str3;
+        },1000);
+    </script>
+</body>
+</html>

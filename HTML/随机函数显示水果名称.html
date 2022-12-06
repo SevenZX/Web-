@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机显示水果名称</title>
+    <style>
+        body{
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var fruit = ["apple","orange","peach","banana","watermelon","strawberry","pear","pitaya","grape","tangerine"];
+        var a=Math.floor(Math.random()*10);
+        // alert("您得到的水果是："+fruit[a]);
+        document.write("您得到的水果是："+fruit[a]);
+    </script>
+</body>
+</html>

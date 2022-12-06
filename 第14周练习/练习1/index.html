@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <ul class="longmenu clearfix" id="main">
+        <li onclick="showInfo()"><a href="javascript:;">
+                <div class="longimg">
+                    <img src="images/pro2.jpg" alt="">
+                </div>
+                <div class="detail clearfix">
+                    <p>vivo iQOO Z1 5G 6GB+128GB 星河银 天玑1000Plus旗舰芯片 144Hz竞速屏 44W</p>
+                    <div class="more clearfix">
+                        <div class="price">
+                            <i>￥</i>
+                            <span>2190</span>
+                        </div>
+                        <div class="plus">
+                            <div class="discount">券</div>
+                        </div>
+                    </div>
+                </div>
+
+            </a></li>
+        <li><a href="javascript:;">
+                <div class="longimg">
+                    <img src="images/pro1.jpg" alt="">
+                </div>
+                <div class="detail clearfix">
+                    <p>vivo iQOO Neo3 5G 8GB+128GB 夜幕黑 高通骁龙865 144Hz竞速屏 立体双扬 44W</p>
+                    <div class="more clearfix">
+                        <div class="price">
+                            <i>￥</i>
+                            <span>2980.00</span>
+                        </div>
+                        <div class="plus">
+                            <div class="discount">券</div>
+                        </div>
+                    </div>
+                </div>
+            </a></li>
+
+        <li><a href="javascript:;">
+                <div class="longimg">
+                    <img src="images/pro3.jpg" alt="">
+                </div>
+                <div class="detail clearfix">
+                    <p>Apple iPhone 11 (A2223) 128GB 黑色 移动联通电信4G手机 双卡双待 活动页限量</p>
+                    <div class="more clearfix">
+                        <div class="price">
+                            <i>￥</i>
+                            <span>5999.0</span>
+                        </div>
+                        <div class="plus">
+                            <div class="discount">券</div>
+                        </div>
+                    </div>
+                </div>
+
+            </a></li>
+        <li><a href="javascript:;">
+                <div class="longimg">
+                    <img src="images/pro4.jpg" alt="">
+                </div>
+                <div class="detail clearfix">
+                    <p>一加 OnePlus 8 Pro 5G旗舰 2K+120Hz 柔性屏 30W无线闪充 高通骁龙865</p>
+                    <div class="more clearfix">
+                        <div class="price">
+                            <i>￥</i>
+                            <span>5398.00</span>
+                        </div>
+                        <div class="plus">
+                            <div class="discount">券</div>
+                        </div>
+                    </div>
+                </div>
+            </a></li>
+    </ul>
+
+    <p id="content"></p>
+</body>
+
+</html>
+
+<script>
+
+    var proFirstWidth, proFirstHeight , str='';
+    //  获取元素样式的兼容性写法
+    function getStyle(obj, attr) {
+        return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj)[attr];
+    }
+
+    function showInfo() {
+        var oMain = document.getElementById('main');
+        var LiFirst = oMain.firstElementChild || oMain.firstChild;
+        var aFirst = LiFirst.firstElementChild || LiFirst.firstChild;
+        var imgWrapper = aFirst.firstElementChild || aFirst.firstChild;
+        var imgFirst = imgWrapper.firstElementChild || imgWrapper.firstChild;
+        // console.log(imgFirst);
+        proFirstWidth=getStyle(imgFirst,'width');
+        proFirstHeight=getStyle(imgFirst,'height');
+        str = "产品图片的宽："+proFirstWidth+'<br/>'+"产品图片的高："+proFirstHeight;
+        document.getElementById('content').innerHTML = str;
+    }
+
+    
+
+
+</script>

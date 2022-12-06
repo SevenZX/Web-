@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计数功能</title>
+    <style>
+        #div1{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <input type="button" value="停止计数" onclick="clearInterval(a)">
+    <!-- <input type="button" value="停止计数" onclick="clearTimeout(a)"> -->
+    <script>
+        var num=0;
+        function count(){
+            num++;
+            document.getElementById("div1").innerHTML=num;
+            // a=setTimeout(count,1000);
+        }
+        // var a=setTimeout(count,1000);
+        var a=setInterval(count,1000);
+    </script>
+</body>
+</html>

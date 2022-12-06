@@ -1,0 +1,1 @@
+document.write("What's your name?");

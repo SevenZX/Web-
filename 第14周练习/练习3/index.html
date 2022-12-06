@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="body">
+    <div class="warp">
+        <form class="form" id="form" name="myform" action="#" method="get">
+                <div class="form-title">
+                    <span>注册账号</span>
+                </div>
+                <div class="form-main">
+                    <div class="form-list">
+                        <span>昵称</span>
+                        <div class="form-text">
+                            <input type="text" id="user" />
+                        </div>
+                        <b id="user_msg"></b>
+                    </div>
+                    <div class="form-list">
+                        <span>邮箱</span>
+                        <div class="form-text">
+                            <input type="text" id="email">
+                        </div>
+                        <b id="email_msg"></b>
+                    </div>
+                    <div class="form-list">
+                        <span>密码</span>
+                        <div class="form-text">
+                            <input type="password" id="password" />
+                        </div>
+                        <b id="password_msg"></b>
+                    </div>
+
+                    <div class="form-list">
+                        <span>再次密码</span>
+                        <div class="form-text">
+                            <input type="password" id="password1" />
+                        </div>
+                        <b id="password1_msg"></b>
+                    </div>
+
+                    <div class="form-list gender">
+                        <span>性别</span>
+                        <div class="form-text">
+                            <label><input type="radio" value="男" name="gender" checked> 男</label>
+                            <label><input type="radio" value="女" name="gender"> 女</label>
+                        </div>
+                    </div>
+
+                    <div class="form-list">
+                        <span>生日</span>
+                        <div class="form-text">
+                            <select>
+                                <option>2021年</option>
+                            </select>
+                            <select>
+                                <option>1月</option>
+                            </select>
+                            <select>
+                                <option>22日</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="form-list">
+                        <span>爱好</span>
+                        <div>
+                            <div class="ortherinput">
+                                <input type="checkbox" />读书
+                                <input type="checkbox" />编程
+                                <input type="checkbox" />运动
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-list">
+                        <span>头像</span>
+                        <div>
+                            <div class="ortherinput">
+                                <input type="image" src="images/default.jpg" width="90px" height="80px" />
+                                <input type="file" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-list">
+                        <span>所在地</span>
+                        <div class="form-text">
+
+                            <select>
+                                <option>河北省</option>
+                            </select>
+                            <select>
+                                <option>秦皇岛市</option>
+                            </select>
+                            <select>
+                                <option>北戴河区</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="form-list">
+                        <span>手机号</span>
+                        <div class="form-text">
+                            <input type="text" id="mobile">
+                        </div>
+                        <b id="mobile_msg"></b>
+                    </div>
+
+                    <div class="prompt">
+                        <p>可通过该手机号码快速找回密码</p>
+                        <p> 中国大陆地区以外手机号码 <a href="javascript:void(0);" id="showcode"> 点击这里</a></p>
+                    </div>
+                    <div class="code">
+                        <input type="text" /><span>获取短信验证码</span>
+                    </div>
+                    <div class="submit">
+                        <input type="submit" id="submit" value="注册" />
+                        <input type="reset" id="reset" value="重置" />
+                    </div>
+
+                    <div class="deal">
+                        <p><label><input type="checkbox" class="acc" id="deal" checked />我已阅读并同意相关服务条款和隐私政策</label> </p>
+                        <span></span>
+                        <div class="deal-list">
+                            <a href="#">《账户规则》</a>
+                            <a href="#">《服务协议》</a>
+                            <a href="#">《隐私政策》</a>
+                        </div>
+                    </div>
+        </form>
+    </div>
+    </div>
+</body>
+<script>
+
+</script>
+
+</html>

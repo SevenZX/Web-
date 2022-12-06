@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>区分nth-child和nth-of-type</title>
+    <style type="text/css">
+        ul p:nth-child(2){   /*nth-child(n)在父级里从一个元素开始查找；不分类型*/
+            background-color: aqua;
+        }
+        ul p:nth-of-type(2){  /*nth-of-type(n)在父级里先看类型，再看位置*/
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>11111</li>
+        <p>aaaaa</p>
+        <li>22222</li>
+        <p>bbbbb</p>
+        <li>33333</li>
+        <p>ccccc</p>
+        <li>44444</li>
+        <p>ddddd</p>
+        <li>55555</li>
+    </ul>
+</body>
+</html>

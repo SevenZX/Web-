@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新东方顶部导航栏</title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        .No_1{
+            background-color: rgba(234, 232, 232, 0.7);
+            border-bottom: 1px dashed;
+        }
+        .top-logo{
+            margin-left: 50px;
+        }
+        .top-logo,
+        .head-nav,
+        .head-nav li{
+            height: 40px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .head-nav{
+            margin: 0 48px;
+            position: relative;
+            left: 500px;
+        }
+        .head-nav li{
+            line-height: 40px;
+            width: 90px;
+            text-align: center;
+        }
+        .head-nav li:before{
+            content: "|";
+            float: left;
+            color: #94959e;
+        }
+        .head-nav li:first-child:before{
+            display: none;
+        }
+        .no-2{
+            position: relative;
+            left: 445px;
+        }
+        .no-3{
+            border: 1px solid black;
+            width: 180px;
+            height: 180px;
+            padding: 20px;
+            position: relative;
+            left: 1050px;
+            top: -10px;
+            background-color: white;
+        }
+        .no-3 li{
+            list-style: none;
+            line-height: 25px;
+            border-top: 1px solid gray;
+        }
+        .no-3 li:first-child{
+            border-top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="No_1">
+        <a href="" class="top-logo"><img src="../img/2022-10-27/logo.gif" ></a>
+        <ul class="head-nav">
+            <li>购物车</li>
+            <li>优惠卷</li>
+            <li>快速注卡</li>
+            <li>各地购课</li>
+            <li>手机报</li>
+            <li>网站导航</li>
+        </ul>
+        <img src="../img/2022-10-27/open_icon.gif" alt="bz" class="no-2">
+    </div>
+    <div class="no-3">
+        <li>托福 雅思 考研 职称英语 初中 日语 </li>
+        <li>网络课堂 资讯中心 知识堂 大师讲坛 学习论坛 学词 考研搜校</li>
+        <li>M-Zone 手机报 时时英语</li>
+    </div>
+</body>
+</html>

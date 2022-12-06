@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>申请表</title>
+</head>
+<body>
+    <h2>申请表</h2>
+    <form action="post">
+        <label for="name"></label>姓名：</label><input type="text" name="xm" id="name" ><br><br> 
+        教育程度：<input type="checkbox" name="xw" value="ss" />硕士&nbsp;
+        <input type="checkbox" name="xw" value="bs" />博士&nbsp;<br><br>
+        <label for="email">常用邮箱：</label><input type="email" name="email" id="email" ><br><br>
+        <label for="age">年龄：</label><input type="number" name="age" id="age"><br><br>
+        <label for="yuexin">月薪:</label><input type="text" name="yx" id="yuexin"><br><br>
+        <label for="fz">附注：</label><textarea name="fz" cols="30" rows="3">请在这里键入附注</textarea><br><br>
+        国籍：<select name="gj" >
+            <option value="0">澳大利亚</option>
+            <option value="1">中国</option>
+            <option value="2">俄罗斯</option>
+        </select><br><br>
+        <input type="submit" name="提交" />&nbsp;<input type="reset" name="重置"/>
+    </form>
+</body>
+</html>

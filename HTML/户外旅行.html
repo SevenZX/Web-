@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-index属性</title>
+    <style type="text/css">
+        div{
+            margin: 10px;
+            width: 370px;
+            border: 2px solid gray;
+            border-radius: 5px;
+            line-height: 25px;
+        }
+        ul{
+            list-style: none;
+            line-height: 25px;
+        }
+        .one{
+            width: 400px;
+            height: 130px;
+            font-size: 15px;
+            position: relative;
+        }
+        .twe{
+            width: 330px;
+            background-color: black;
+            font-size: 15px;
+            color: white;
+            opacity: 0.5;
+            position: relative;
+            top: -28px;
+            z-index: 1;
+            text-align: center;
+        }
+        .three{
+            position: relative;
+            top: -52px;
+            font-size: 15px;
+            color: white;
+            text-align: center;
+            z-index: 1;
+        }
+        .four{
+            position: relative;
+            top: -48px;
+            font-size: 15px;
+        }
+        .five{
+            position: relative;
+            top: -52px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li class="one"><img src="../img/maple.jpg" alt="金秋落叶"></li>
+            <li class="twe">&nbsp;</li>
+            <li class="three">京秋魅力—相约共赏香山落叶</li>
+            <li class="four">时间：11月16日 星期六 8:30</li>
+            <li class="five">地点：朝阳区西大望路珠江帝景K区正门前集合</li>
+        </ul>
+    </div>
+    
+</body>
+</html>

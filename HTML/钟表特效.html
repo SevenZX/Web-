@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>钟表特效</title>
+    <style>
+        .clock {
+            width: 600px;
+            height: 600px;
+            margin: 0 auto;
+            background: url(../img/2022.11.28/clock.jpg) no-repeat;
+            position: relative;
+        }
+
+        .clock div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+
+        .h {
+            background: url(../img/2022.11.28/hour.png) no-repeat center center;
+        }
+
+        .m {
+            background: url(../img/2022.11.28/minute.png) no-repeat center center;
+        }
+
+        .s {
+            background: url(../img/2022.11.28/second.png) no-repeat center center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clock">
+        <div class="h" id="hour"></div>
+        <div class="m" id="minute"></div>
+        <div class="s" id="second"></div>
+    </div>
+</body>
+
+</html>
+<script>
+    var hour = document.getElementById("hour");
+    var minute = document.getElementById("minute");
+    var second = document.getElementById("second");
+    // 定义变量保存 秒、分、时、毫秒
+    var s = 0, m = 0, h = 0, ms = 0;
+    // 开始定时器
+    setInterval(function () {
+        // 得到最新的时间
+        var date=new Date();
+        // 现在的毫秒数
+        ms=date.getMilliseconds();
+        // 得到秒，如 1.3 s，通过毫秒计算小数位
+        s=date.getSeconds() + ms / 1000;
+        // 得到分钟，如  45.6m，通过秒计算小数位
+        m=date.getMinutes() + s / 60;
+        // 得到小时，如  4.6h，通过分钟计算小数位
+        h=date.getHours() % 12 + m / 60;
+        // 计算并设置旋转角度
+        // 一圈  360 °     一共有 60 秒       每秒  6 °   现在是 s秒
+        second.style.WebkitTransform = "rotate(" + s * 6 + "deg)";
+        //  变化旋转deg度
+        minute.style.WebkitTransform = "rotate(" + m * 6 + "deg)";
+        hour.style.WebkitTransform = "rotate(" + h * 30 + "deg)";
+        second.style.MozTransform = "rotate(" + s * 6 + "deg)";
+        //  变化旋转de度
+        minute.style.MozTransform = "rotate(" + m * 6 + "deg)";
+        hour.style.MozTransform = "rotate(" + h * 30 + "deg)";
+    }, 1);
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" >
+    <title>电子产品调查问卷</title>
+</head>
+<body>
+    <h2>American Metric 电子产品调查表</h2>
+    <form action="post">
+        <label for="xm">姓名：</label><input type="text" name="xm" id="xm" size="30" placeholder="输入必须是2~6为字符"><br><br>
+        购买日期：<input type="text" name="goumai" cols="5">年&nbsp;
+        <select name="month" >
+            <option value="0">1月</option>
+            <option value="1">2月</option>
+            <option value="2">3月</option>
+            <option value="3">4月</option>
+        </select>月&nbsp;
+        <select name="day">
+            <option value="0">1日</option>
+            <option value="1">10日</option>
+            <option value="2">15日</option>
+        </select>日<br><br>
+        <label for="email">电子邮箱地址：</label><input type="email" name="email" id="email" placeholder="www.baidu.com"><br><br>
+        <label for="phone">手机号码：</label><input type="text" name="phone" id="phone" size="40" placeholder="输入必须是13/15/18开头的11为数字"><br><br>
+        您是否查看过我们的在线产品目录？<input type="radio" name="panduan" value="yes">是&nbsp;
+        <input type="radio" name="panduan" value="no">否<br><br>
+        如果查看过，您对哪些产品有兴趣购买？（选择提供的产品）<br>
+        <input type="checkbox" name="chanping" value="TV">大屏幕电视机&nbsp;
+        <input type="checkbox" name="chanping" value="video">音频设备&nbsp;
+        <input type="checkbox" name="chanping" value="sp">视频设备&nbsp;
+        <input type="checkbox" name="chanping" value="xiangji">相机<br><br>
+        在填写订单之前，您还有什么问题、意见或建议？<br>
+        <textarea name="jianyi"  cols="40" rows="3">您的输入：</textarea><br><br>
+        <input type="submit" value="提交">&nbsp;<input type="reset" value="重置" disabled >
+    </form>
+</body>
+</html>

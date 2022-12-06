@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花样链接卡</title>
+    <style type="text/css">
+        #all{
+            width: 300px;
+            height: 300px;
+            border: 2px solid red;
+        }
+        .one div,
+        .twe div,
+        .three div,
+        .four div,
+        .five div{
+            width: 100px;
+            height: 100px;
+        }
+        .one{
+            position: relative;
+            left:0px;
+            top: 0px;
+        }
+        .twe{
+            position: relative;
+            left:200px;
+            top: -100px;
+        }
+        .three{
+            position: relative;
+            left:0px;
+            top: 0px;
+        }
+        .four{
+            position: relative;
+            top:-100px;
+            left: 200px;
+        }
+        .five{
+            position: relative;
+            top: -300px;
+            left: 100px;
+        }
+        a div{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        a:hover div{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+        a{
+            text-decoration: none;
+            text-align: center;
+            line-height: 100px;
+        }
+        a:hover{
+            text-decoration: none;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="all">
+        <a href="#" class="one">
+            <div>1</div>
+        </a>
+        <a href="#" class="twe">
+            <div>2</div>
+        </a>
+        <a href="#" class="three">
+            <div>3</div>
+        </a>
+        <a href="#" class="four">
+            <div>4</div>
+        </a>
+        <a href="#" class="five">
+            <div>5</div>
+        </a>
+    </div>
+</body>
+</html>

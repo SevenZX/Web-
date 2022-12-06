@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>论坛</title>
+    <link href="css/bbs.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="bbs">
+        <header>
+            <span onclick="add()">我要发帖</span>
+        </header>
+        <section id="main">
+        </section>
+        <div class="post">
+            <input class="title" placeholder="请输入标题（1-50个字符）">所属版块：
+            <select>
+                <option>请选择版块</option>
+                <option>Python交流专区</option>
+                <option>Java交流专区</option>
+                <option>Web交流专区</option>
+            </select>
+            <textarea class="content"></textarea>
+            <input class="btn" value="发布" onclick="create()">
+            <input class="btn" value="关闭" onclick="closing()">
+        </div>
+    </div>
+</body>
+<script>
+    const postelement = document.getElementsByClassName("post")[0];
+    // 点击“我要发贴”
+    function add() {
+        postelement.style.display = "block";
+    }
+    // 点击“关闭”
+    function closing() {
+        postelement.style.display = "none";
+    }
+    // 点击“发布”
+    function create() {
+        var title = document.getElementsByClassName("title")[0];
+        // 创建li标签
+        var main = getElementsById("main");
+        var liElement = document.createElement("li");
+        main.appendChild(liElement);
+        // 获取标题
+        var h1Element = document.createElement("h1");
+        h1Element.innerHTML = title.value;
+
+        // 获取选择板块
+        var selectElement = title.nextElementSibling;
+        var selectValue = selectElement.value;
+        //获取内容
+        var textAreaElement = selectElement.nextElementSibling;
+        var textAreaValue = textAreaElement.value;
+        // 拼接内容
+        var spanElement = document.createElement("span");
+        spanElement.innerHTML = '板块：' + selectValue + ' 内容：' + textAreaValue;
+        // 删除发帖
+        var btnElement = document.createElement('input');
+        btnElement.setAttribute('type', 'button');
+        btnElement.setAttribute('name', 'del');
+        btnElement.setAttribute('class', 'delbtn');
+        btnElement.setAttribute('value', '删除');
+        btnElement.setAttribute('onclick', 'del(this)');
+        // 创建p标签
+        var pElement = document.createElement("p");
+        // 将各元素放入li中
+        pElement.appendChild(spanElement);
+        pElement.appendChild(btnElement);
+        liElement.appendChild(h1Element);
+        liElement.appendChild(pElement);
+        main.insertBefore(liElement, main.firstElementChild);
+        closing();
+    }
+    // 点击“删除”
+    function del(obj) {
+        var main = document.getElementsById("main");
+        main.removeChild(obj.parentNode.parentNode);
+    }
+</script>
+
+</html>

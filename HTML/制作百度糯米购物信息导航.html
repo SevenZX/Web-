@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>制作百度糯米购物信息导航</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box {
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .box img {
+            width: 100%;
+        }
+
+        .rightFixed {
+            position: fixed;
+            right: 0px;
+            top: 350px;
+        }
+
+        .navList {
+            position: relative;
+            margin-bottom: 4px;
+        }
+
+        .navList span {
+            position: absolute;
+            top: 0;
+            background: #414141;
+            width: 50px;
+            height: 36px;
+            line-height: 36px;
+            padding: 0 20px;
+            font-size: 12px;
+            color: #ffffff;
+            border-radius: 4px 0 0 4px;
+            opacity: 0;
+
+        }
+
+        .navList a {
+            width: 36px;
+            height: 36px;
+            display: block;
+            line-height: 36px;
+            background: #414141;
+            border-radius: 4px 0 0 4px;
+            position: relative;
+        }
+
+        .navList .a1 {
+            background: #414141 url("../img/2022-11-04/toolbar_05.png") center no-repeat;
+        }
+
+        .navList .a2 {
+            background: #414141 url("../img/2022-11-04/toolbar_10.png") center no-repeat;
+        }
+
+        .navList .a3 {
+            background: #414141 url("../img/2022-11-04/toolbar_15.png") center no-repeat;
+        }
+
+        .navList .a4 {
+            background: #414141 url("../img/2022-11-04/toolbar_19.png") center no-repeat;
+        }
+
+        span:hover {
+            width: 100px;
+            opacity: 1;
+            background: crimson url("../img/2022-11-04/toolbar_05.png") 90% 50% no-repeat;
+            transform: translate(-100px, 0);
+            transition: all 1s linear 0.1s;
+        }
+
+        .navList .span2:hover {
+            width: 100px;
+            opacity: 1;
+            background: crimson url("../img/2022-11-04/toolbar_10.png") 90% 50% no-repeat;
+            transform: translate(-100px, 0);
+            transition: all 1s linear 0.1s;
+        }
+
+        .navList .span3:hover {
+            width: 100px;
+            opacity: 1;
+            background: crimson url("../img/2022-11-04/toolbar_15.png") 90% 50% no-repeat;
+            transform: translate(-100px, 0);
+            transition: all 1s linear 0.1s;
+        }
+
+        .navList .span4:hover {
+            width: 100px;
+            opacity: 1;
+            background: crimson url("../img/2022-11-04/toolbar_19.png") 90% 50% no-repeat;
+            transform: translate(-100px, 0);
+            transition: all 1s linear 0.1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="../img/2022-11-04/img.bmp" alt="" />
+        <ul class="rightFixed">
+            <li class="navList">
+                <a class="a1" href="#"></a>
+                <span class="span1">购物车</span>
+            </li>
+            <li class="navList">
+                <a class="a2" href="#"></a>
+                <span class="span2">我的关注</span>
+            </li>
+            <li class="navList">
+                <a class="a3" href="#"></a>
+                <span class="span3">我的足迹</span>
+            </li>
+            <li class="navList">
+                <a class="a4" href="#"></a>
+                <span class="span4">我的消息</span>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

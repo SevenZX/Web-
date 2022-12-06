@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>两个数比较</title>
+</head>
+<body>
+    <script>
+        var res;
+        function compare(){
+            var first,second,sum;
+            first=prompt("请输入第一个数字","");
+            second=prompt("请输入第二个数字","");
+            if(parseFloat(first)>parseFloat(second)){
+                sum="第一个数字大";
+                return sum;
+            }else if(parseFloat(second)>parseFloat(first)){
+                sum="第二数字大";
+                return sum;
+            }else{
+                sum="两个数一样大";
+                return sum;
+            }
+        }
+        res=compare();
+        alert(res);
+    </script>
+</body>
+</html>
