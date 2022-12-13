@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习通登陆界面</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            background-color: whitesmoke;
+        }
+        .box{
+            width: 900px;
+            height: 400px;
+            background-color: white;
+            margin: 130px auto;
+            border: 1px solid white;
+            border-radius: 20px;
+            position: relative;
+        }
+        .boxLeft{
+            line-height: 40px;
+        }
+        h2{
+            position: absolute;
+            left: 200px;
+            top: 40px;
+        }
+        form{
+            line-height: 70px;
+            position: absolute;
+            left: 90px;
+            top: 70px;
+        }
+        form img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            left: 250px;
+            top: 87px;
+        }
+        form b{
+            color: red;
+            position: absolute;
+            top: 32px;
+            left:2px;
+        }
+        form b.next
+        {
+            color: red;
+            position: absolute;
+            top: 102px;
+            left:2px;
+        }
+        .forget{
+            color: #F8F8F3;
+            text-decoration: none;
+            position: absolute;
+            top: 70px;
+            left: 280px;
+        }
+        .forget:hover{
+            color: red;
+            text-decoration: none;
+        }
+        .yongHu{
+            width: 350px;
+            height: 40px;
+            border: 1px solid gray;
+            background-color: rgb(81, 69, 69,0.15);
+            color: white;
+            font-size: 18px;
+            border-radius: 30px;
+        }
+        .miMa{
+            width: 350px;
+            height: 40px;
+            border: 1px solid gray;
+            background-color: rgb(81, 69, 69,0.15);
+            color: white;
+            font-size: 18px;
+            border-radius: 30px;
+        }
+        .logIn{
+            width: 350px;
+            height: 40px;
+            border: 1px solid white;
+            background-color: rgb(91, 186, 237);
+            color: rgb(91, 186, 237);
+            font-size: 18px;
+            border-radius: 30px;
+            background-image: linear-gradient(to right, #F9FBCB 0%, #F8F8F3 100%);
+        }
+        .zhuanHuan{
+            position: relative;
+            left: 95px;
+            top: 260px;
+        }
+        .zhuanHuan a{
+            color: rgb(91, 186, 237);
+            text-decoration: none;
+        }
+        .righta{
+            position: absolute;
+            left: 220px;
+        }
+        .Kefu{
+            position: absolute;
+            left: 850px;
+            top: 30px;
+        }
+        .photo{
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 550px;
+            top: 75px;
+        }
+        .photoText{
+            position: absolute;
+            left: 580px;
+            top: 320px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"> 
+        <div class="boxLeft">
+            <h2>账号登录</h2>
+            <form action="主页面.html" method="get">
+                <input type="text" class="yongHu" id="user" placeholder="   请输入手机号:" required>
+                <b id="user_msg"></b>
+                <br>
+                <label for="">
+                    <img src="../image/close.png" alt="" id="eye">
+                </label>
+                <input type="password" class="miMa" id="password" placeholder="    请输入密码:" required>
+                <a href="忘记密码界面.html" class="forget">忘记密码</a>
+                <b id="password_msg" class="next"></b>
+                <br>
+                <input type="submit" value="登录" class="logIn">
+            </form>
+            <div class="zhuanHuan">
+                <a href="注册页面.html">新用户注册</a>
+                <a href="验证码登录页面.html" class="righta">手机验证码登陆</a>
+            </div>
+        </div>
+        <div class="boxRight">
+            <a href="https://robot.chaoxing.com/chat?unitId=25518&robotId=ad9c9be3fade4280bd71d6389c06be96&referUrl=pc" class="Kefu" style="text-decoration:none; color: gray;">客服</a>
+            <div>
+                <img src="../image/二维码.png" alt="手机APP登录二维码" class="photo">
+                <div class="photoText">使用学习通APP扫码登陆</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var eye = document.getElementById('eye');
+    var pwd = document.getElementById('password');
+
+    var flag = 0;
+    eye.onclick = function() {
+        if (flag == 0) {
+            pwd.type = 'text';
+            eye.src = '../image/open.png';
+            flag = 1; 
+        } else {
+            pwd.type = 'password';
+            eye.src = '../image/close.png';
+            flag = 0;
+        }
+    }
+    document.getElementById("user").onblur = CheckUser;
+    document.getElementById("password").onblur = CheckPassword;
+
+    document.getElementById("form").onsubmit = function(){
+        var flag=true;
+        if(!CheckUser())    flag=false;
+        if(!CheckPassword())    flag=false;
+        return flag;
+    };
+    function CheckUser(){
+        var user = document.getElementById("user").value;
+        var user_msg = document.getElementById("user_msg");
+        user_msg.innerHTML = "";
+        if(user==""){
+            user_msg.innerHTML="*手机号不能为空";
+            return false;
+        }
+        if(user.length!=11){
+            user_msg.innerHTML="*手机号输入不正确，应该为11位";
+            return false;
+        }else{
+            user_msg.innerHTML="";
+        }
+        return true;
+    }
+    function CheckPassword(){
+        var password = document.getElementById("password").value;
+        var password_msg = document.getElementById("password_msg");
+        password_msg.innerHTML = "";
+        if(password==""){
+            password_msg.innerHTML = "*密码不能为空";
+            return false;
+        }
+        if(password.length<8){
+            password_msg.innerHTML = "*密码长度必须大于等于8个字符";
+            return false;
+        }
+        return true;
+    }
+</script>
+</html>
